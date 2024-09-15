@@ -1,20 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import NavBar from './componentes/NavBar/navBar'
-import { ItemListContainer } from './componentes/ItemListConteniner/ItemListContainer'
+// App.js
+import React from 'react';
 
-function App() {
-  
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from './componentes/NavBar/navBar';
+import ItemListContainer from './componentes/ItemListConteniner/ItemListContainer';
+import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
+import Footer from './componentes/Footer/Footer';
+import "./App.css"
 
+
+const App = () => {
   return (
-    <>
-      <NavBar/>
-      <ItemListContainer greeting="producto"/>
-
-    </>
-  )
+    <div className="wrapper" >
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route path='/' element={<ItemListContainer/>}/>
+          <Route path='/categoria/:idCategoria' element={<ItemListContainer/>}/>
+          <Route path='/item/:idItem' element={<ItemDetailContainer/>}/>
+          </Routes>
+        <Footer/>
+      </BrowserRouter>
+      </div>
+  );
 }
 
-export default App
+export default App;
+

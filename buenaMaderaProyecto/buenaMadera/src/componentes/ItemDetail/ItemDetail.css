@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+.cardProducto img {
+    width: 400px;
+    object-fit: contain;
+}
+.cardProducto{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}   
+.descripcion h2{
+    border-bottom: 1px solid #e3e3e3; 
+    padding-bottom: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-weight:700 ;
+    
+}
+.descripcion h3{
+    font-family: 'Nunito', sans-serif;
+    font-size: 45px;
+    color: green;
+    padding-top: 15px;
+    
+}
+
+
+button {
+    border: solid 2px;
+    background-color: #ffffff; 
+    color: rgb(0, 0, 0); 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    align-self: center; 
+    margin-top: auto; 
+    transition: background-color 0.3s ease; 
+    font-family:'Nunito', sans-serif ;
+}
+
+button:hover {
+    background-color: green; 
+
+}
